@@ -1,12 +1,15 @@
 import functools
 from requests_html import HTMLSession
 from bs4 import *
-from operator import itemgetter
 from tabulate import tabulate
- 
-#### VARIABLES ####
+
+############################ VARIABLES ########################################
 players_num = 12
-players = [{"name": "Eric","cuenta": "Blackbird+SR71"},{"name": "Nino","cuenta":"TROPHY+WINNER"},{"name": "Igna","cuenta": "MarthaeSoSo"},{"name": "Miguel","cuenta": "El+Pinche+Joto"},{"name": "Hamza","cuenta": "Kerry+Co+Boalak"},{"name": "Bastardas","cuenta": "r+u+fine"},{"name": "Pol","cuenta": "Topacio+Tenorio"},{"name": "Shaggy","cuenta": "LC+Spanish+Uzi"},{"name": "Ivan","cuenta": "MC+Vergote"},{"name": "Guaye","cuenta": "RobertazpeLkN"},{"name": "Parejo","cuenta": "RITOPLSDONTBAN"},{"name": "Sergi","cuenta": "Papingo+Ibaka"}]
+players = [{"name": "Eric","cuenta": "Blackbird+SR71"},{"name": "Nino","cuenta":"TROPHY+WINNER"},{"name": "Igna","cuenta": "MarthaeSoSo"},
+		   {"name": "Miguel","cuenta": "El+Pinche+Joto"},{"name": "Hamza","cuenta": "Kerry+Co+Boalak"},{"name": "Bastardas","cuenta": "r+u+fine"},
+		   {"name": "Pol","cuenta": "Topacio+Tenorio"},{"name": "Shaggy","cuenta": "LC+Spanish+Uzi"},{"name": "Ivan","cuenta": "MC+Vergote"},
+		   {"name": "Guaye","cuenta": "RobertazpeLkN"},{"name": "Parejo","cuenta": "RITOPLSDONTBAN"},{"name": "Sergi","cuenta": "Papingo+Ibaka"}]
+################################################################################
 ranks = ["Challenger","Grandmaster","Master","Diamond 1","Diamond 2","Diamond 3","Diamond 4","Platinum 1","Platinum 2","Platinum 3","Platinum 4","Gold 1","Gold 2","Gold 3","Gold 4","Silver 1","Silver 2","Silver 3","Silver 4","Bronze 1","Bronze 2","Bronze 3","Bronze 4","Iron 1","Iron 2","Iron 3", "Iron 4","Unranked"]
 place = list(range(1,players_num+1))
 printable_list = []
@@ -69,19 +72,21 @@ def sort(a,b):
 	if a["liga"] == b["liga"]:
 		if int(a["LP"].split(" ")[0]) > int(b["LP"].split(" ")[0]): 
 			return -1
-		if int(a["LP"].split(" ")[0]) < int(b["LP"].split(" ")[0]):
+		elif int(a["LP"].split(" ")[0]) < int(b["LP"].split(" ")[0]):
 			return 1
+		elif int(a["winratio"].split("%")[0]) > int(b["winratio"].split("%")[0]):
+			return -1
 		else:
-			if a["games"] > b["games"]:
+			if a["wins"] > b["wins"]:
 				return -1
 			else:
-				return 1
+				return 1	
 	else:
 		if ranks.index(a["liga"]) > ranks.index(b["liga"]):
 			return 1
 		else:
 			return -1
-
+			
 cmp = functools.cmp_to_key(sort)
 printable_list.sort(key=cmp)
 
