@@ -22,7 +22,7 @@ Clone the repo:
 git clone https://github.com/hamzab70/op.gg-Scraper.git
 ```
 
-Open opgg.py and change this 3 variables:
+Open opgg.py and change the 3 variables (check example.py if you have any doubt):
 
 * server = the accounts server
 * players_num = the total number of players you want to scrape

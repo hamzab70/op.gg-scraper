@@ -4,9 +4,12 @@ from bs4 import *
 from tabulate import tabulate
 
 ############################ VARIABLES ########################################
-server = ""
-players_num = 0
-players = [{"name": "","account": ""},{"name": "","account": ""}...]
+server = "euw"
+players_num = 12
+players = [{"name": "Eric","account": "Blackbird SR71"},{"name": "Nino","account":"TROPHY WINNER"},{"name": "Igna","account": "MarthaeSoSo"},
+	   {"name": "Miguel","account": "El Pinche Joto"},{"name": "Hamza","account": "Kerry Co Boalak"},{"name": "Bastardas","account": "r u fine"},
+	   {"name": "Pol","account": "Topacio Tenorio"},{"name": "Shaggy","account": "LC Spanish Uzi"},{"name": "Ivan","account": "MC Vergote"},
+	   {"name": "Guaye","account": "RobertazpeLkN"},{"name": "Parejo","account": "RITOPLSDONTBAN"},{"name": "Sergi","account": "Papingo Ibaka"}]
 ################################################################################
 
 ranks = ["Challenger","Grandmaster","Master","Diamond 1","Diamond 2","Diamond 3","Diamond 4","Platinum 1","Platinum 2","Platinum 3","Platinum 4","Gold 1","Gold 2","Gold 3","Gold 4","Silver 1","Silver 2","Silver 3","Silver 4","Bronze 1","Bronze 2","Bronze 3","Bronze 4","Iron 1","Iron 2","Iron 3", "Iron 4","Unranked"]
