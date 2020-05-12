@@ -37,22 +37,22 @@ python3 opgg.py
 and the result should be something like:
 
 ```
-=====  =========  ===============  ==========  ======  =======  ======  ========  =========
-  Pos  Player     Account          Elo         LP        Games    Wins    Losses  Winrate
-=====  =========  ===============  ==========  ======  =======  ======  ========  =========
-    1  Nino       TROPHY WINNER    Platinum 4  0 LP         70      48        22  69%
-    2  Ivan       MC Vergote       Gold 1      0 LP         60      39        21  65%
-    3  Shaggy     LC Spanish Uzi   Gold 1      0 LP         72      40        32  56%
-    4  Miguel     El Pinche Joto   Gold 3      59 LP        80      48        32  60%
-    5  Eric       Blackbird SR71   Silver 1    38 LP        69      36        33  52%
-    6  Guaye      RobertazpeLkN    Silver 4    100 LP       47      22        25  47%
-    7  Igna       MarthaeSoSo      Silver 4    69 LP        33      17        16  52%
-    8  Parejo     RITOPLSDONTBAN   Bronze 1    0 LP         15       7         8  47%
-    9  Sergi      Papingo Ibaka    Bronze 3    85 LP        16       7         9  44%
-   10  Hamza      Kerry Co Boalak  Bronze 3    3 LP         10       4         6  40%
-   11  Pol        Topacio Tenorio  Bronze 4    86 LP        12       4         8  33%
-   12  Bastardas  r u fine         Unranked    0 LP          0       0         0  0%
-=====  =========  ===============  ==========  ======  =======  ======  ========  =========
+=====  =========  ===============  =================  =======  ======  ========  =========
+  Pos  Player     Account          Elo                  Games    Wins    Losses  Winrate
+=====  =========  ===============  =================  =======  ======  ========  =========
+    1  Nino       TROPHY WINNER    Platinum 4 (0 LP)       70      48        22  69%
+    2  Shaggy     LC Spanish Uzi   Gold 1 (2 LP)           74      41        33  55%
+    3  Ivan       MC Vergote       Gold 1 (0 LP)           61      39        22  64%
+    4  Miguel     El Pinche Joto   Gold 3 (56 LP)          83      49        34  59%
+    5  Eric       Blackbird SR71   Silver 1 (58 LP)        70      37        33  53%
+    6  Guaye      RobertazpeLkN    Silver 4 (100 LP)       48      22        26  46%
+    7  Igna       MarthaeSoSo      Silver 4 (59 LP)        34      17        17  50%
+    8  Parejo     RITOPLSDONTBAN   Bronze 1 (0 LP)         15       7         8  47%
+    9  Sergi      Papingo Ibaka    Bronze 3 (85 LP)        16       7         9  44%
+   10  Hamza      Kerry Co Boalak  Bronze 3 (3 LP)         10       4         6  40%
+   11  Pol        Topacio Tenorio  Bronze 4 (86 LP)        12       4         8  33%
+   12  Bastardas  r u fine         Bronze 4 (16 LP)        10       2         8  20%
+=====  =========  ===============  =================  =======  ======  ========  =========
 ```
 
 

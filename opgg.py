@@ -89,4 +89,9 @@ def sort(a,b):
 cmp = functools.cmp_to_key(sort)
 printable_list.sort(key=cmp)
 
-print(tabulate([elem.values() for elem in printable_list], headers=['Pos','Player', 'Account', 'Elo', 'LP', 'Games', 'Wins', "Losses", "Winrate"], showindex=place, tablefmt="rst", numalign="right", stralign="left"))
+for player in printable_list:
+
+	player["league"] = player["league"] + ' (' + player["LP"] + ')'
+	del player['LP']
+
+print(tabulate([elem.values() for elem in printable_list], headers=['Pos','Player', 'Account', 'Elo', 'Games', 'Wins', "Losses", "Winrate"], showindex=place, tablefmt="rst", numalign="right", stralign="left"))
