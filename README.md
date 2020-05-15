@@ -1,6 +1,6 @@
 # op.gg Scraper
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/hamzab70) 
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/hamzab70) 
 
 Web scrapper that uses op.gg anLeague Of Legends API to sort a list of players using the same format as https://soloqchallenge.gg/
 
