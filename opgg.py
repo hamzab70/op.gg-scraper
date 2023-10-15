@@ -7,13 +7,13 @@ import pprint
 ############################ VARIABLES ########################################
 server = "na"
 players = [{"name": "Devon","account": "Hdannihilator"},
-		   {"name": "Alex","account":"Crusading Dino"}, 
+		   {"name": "Alex G","account":"Crusading Dino"}, 
 		   {"name": "Lamont","account":"Arri"},
 		   {"name": "Grayson","account":"xGreySwag"},
-		   {"name": "?","account":"Defaults01"},
-		   {"name": "?","account":"DryEyesWhiteDrag"},
-		   {"name": "?","account":"MAgicdragon0987"},
-		   {"name": "Alex","account":"AlexGdawg"}]
+		   {"name": "Alberto","account":"Defaults01"},
+		   {"name": "Matthew","account":"DryEyesWhiteDrag"},
+		   {"name": "Ethan","account":"MAgicdragon0987"},
+		   {"name": "Alex M","account":"AlexGdawg"}]
 ################################################################################
 ranks = ["challenger","grandmaster","master",
 		 "diamond1","diamond2","diamond3","diamond4",
