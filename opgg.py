@@ -4,6 +4,7 @@ from bs4 import *
 from tabulate import tabulate
 import pprint
 
+# https://www.op.gg/multisearch/na?summoners=Crusading%20Dino%2C%20Hdannihilator%2C%20Arri%2C%20xGreySwag%2C%20Defaults01%2C%20DryEyesWhiteDrag%2C%20MAgicdragon0987%2C%20AlexGdawg
 ############################ VARIABLES ########################################
 server = "na"
 players = [{"name": "Devon","account": "Hdannihilator"},
