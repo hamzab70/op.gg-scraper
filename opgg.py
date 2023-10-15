@@ -2,12 +2,30 @@ import functools
 from requests_html import HTMLSession
 from bs4 import *
 from tabulate import tabulate
+import pprint
 
 ############################ VARIABLES ########################################
-server = "euw"
-players = [{"name": "","account": ""},{"name": "","account":""}...]
+server = "na"
+players = [{"name": "Devon","account": "Hdannihilator"},
+		   {"name": "Alex","account":"Crusading Dino"}, 
+		   {"name": "Lamont","account":"Arri"},
+		   {"name": "Grayson","account":"xGreySwag"},
+		   {"name": "?","account":"Defaults01"},
+		   {"name": "?","account":"DryEyesWhiteDrag"},
+		   {"name": "?","account":"MAgicdragon0987"},
+		   {"name": "Alex","account":"AlexGdawg"}]
 ################################################################################
-ranks = ["Challenger","Grandmaster","Master","Diamond 1","Diamond 2","Diamond 3","Diamond 4","Platinum 1","Platinum 2","Platinum 3","Platinum 4","Gold 1","Gold 2","Gold 3","Gold 4","Silver 1","Silver 2","Silver 3","Silver 4","Bronze 1","Bronze 2","Bronze 3","Bronze 4","Iron 1","Iron 2","Iron 3", "Iron 4","Unranked"]
+ranks = ["challenger","grandmaster","master",
+		 "diamond1","diamond2","diamond3","diamond4",
+		 "emerald1","emerald2","emerald3","emerald4",
+		 "platinum1","platinum2","platinum3","platinum4",
+		 "gold1","gold2","gold3","gold4",
+		 "silver1","silver2","silver3","silver4",
+		 "bronze1","bronze2","bronze3","bronze4",
+		 "iron1","iron2","iron3", "iron4",
+		 "unranked"]
+
+
 printable_list = []
 
 session = HTMLSession()
@@ -18,31 +36,36 @@ for name in players:
 	html = session.get(page)
 	soup = BeautifulSoup(html.content, 'html.parser')
 
-	rank = soup.find("div", {"class": "TierRank"}).string.strip()
 
-	LP = soup.find("span", {"class": "LeaguePoints"})
+	htmll = soup.prettify()  #bs is your BeautifulSoup object
+
+
+	try:
+		rank = soup.find("div", {"class": "tier"}).getText(strip=True)
+		
+	except:
+		rank = "unranked"
+
+	LP = soup.find("div", {"class": "lp"})
 	if LP is not None:
-		LP = LP.string.strip()
+		LP = LP.getText(strip=True)
 	else:
 		LP = "0 LP"
 
-	wins = soup.find("span", {"class": "wins"})
-	if wins is not None:
-		wins = int(wins.string.replace("W",""))
-	else:
-		wins = 0
+	wins_losses = soup.find("div", {"class": "win-lose"})
+	if wins_losses is not None:
+		# wins = int(wins.getText(strip=True).replace("W",""))
 
-	losses = soup.find("span", {"class": "losses"})
-	if losses is not None:
-		losses = int(losses.string.replace("L",""))
+		wins, losses = wins_losses.getText(strip=True).replace("W", " ").replace("L", "").split()
 	else:
-		losses = 0
+		wins, losses = 0, 0
 
-	winratio = soup.find("span", {"class": "winratio"})
-	if winratio is not None:
-		winratio = winratio.string.replace("Win Ratio ","")
-	else:
+	if int(wins) + int(losses) == 0:
 		winratio = "0%"
+	else:
+		winratio = str(round((int(wins) / (int(wins) + int(losses))) * 100, 2)) + "%"
+		
+
 
 	if LP is not None:
 		league = rank
@@ -50,7 +73,7 @@ for name in players:
 		league = "Unranked"
 
 	if wins is not None:
-		games = wins+losses
+		games = int(wins)+int(losses)
 
 	promo = ""
 	if LP == "100 LP":
@@ -65,9 +88,10 @@ for name in players:
 
 def sort(a,b):
 	if a["league"] == b["league"]:
-		if int(a["LP"].split(" ")[0]) > int(b["LP"].split(" ")[0]):
+		# if int(a["LP"].split(" ")[0]) > int(b["LP"].split(" ")[0]):
+		if int(a["LP"][:-2]) > int(b["LP"][:-2]):
 			return -1
-		elif int(a["LP"].split(" ")[0]) < int(b["LP"].split(" ")[0]):
+		elif int(int(a["LP"][:-2])) < int(b["LP"][:-2]):
 			return 1
 		elif int(a["winratio"].split("%")[0]) > int(b["winratio"].split("%")[0]):
 			return -1
