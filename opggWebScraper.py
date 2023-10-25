@@ -19,7 +19,9 @@ players = [{"name": "Devon","account": "Hdannihilator"},
 		   {"name": "Alberto","account":"Defaults01"},
 		   {"name": "Matthhew","account":"DryEyesWhiteDrag"},
 		   {"name": "Ethan","account":"MAgicdragon0987"},
-		   {"name": "Alex G","account":"AlexGdawg"}]
+		   {"name": "Alex G","account":"AlexGdawg"},
+           {"name": "Jacob", "account": "Velmas Dumptruck"}]
+
 ranks = ["challenger","grandmaster","master",
 		 "diamond1","diamond2","diamond3","diamond4",
 		 "emerald1","emerald2","emerald3","emerald4",
@@ -29,36 +31,10 @@ ranks = ["challenger","grandmaster","master",
 		 "bronze1","bronze2","bronze3","bronze4",
 		 "iron1","iron2","iron3", "iron4",
 		 "unranked"]
+
 chromedriver_path = "C:/Users/nwang/---/Programming/Python/Scripts/chromedriver"
 ################################################################################
 
-### Important Stats
-#  date surveyed
-#  list of most popular champions (the list of them on the left below rank) and their stats. seems like 7 max champs
-#		EX: CS 39.8 (1.3) --> Average CS per game (Average CS / min) for pyke
-#		EX: 2.3:1 KDA --> Average 2.3 kills+assists per death for pyke
-#		EX: 8.7 / 7.4 / 8.3 --> AVerage of 8.7 kills, 7.4 deaths, 8.3 assists per game for pyke
-#
-#
-#	past 20 games:
-#		Game  | Date/Time Played |Time   | Result | Champ| Matchup|  KDA    | Ratio       | Kill parti| pnk wards | CS | CS/min | Avg rank
-#		Game 1| Jan 1, 2000, 10pm|28m33s | Loss   | Pyke | Thresh | 4/12/10 | KDA: 1.17:1 |  44%      |   6		  | 32 | 1.1	| Bronze 2
-#		ETC.
-#
-#
-#	stats over those 20 games:
-#		avg game time
-#			avg game time (wins)
-#			avg game time (loss)
-#		w/l ratio
-#		avg kda
-#		avg kp
-#		avg pink wards
-#		avg cs
-#		avg cs/min
-#		avg avg rank
-#		
-###
 
 def main(player_ign):
 
@@ -167,4 +143,4 @@ def main(player_ign):
 	
 
 if __name__ == "__main__":
-	main()
+	main("EnDoubleU")

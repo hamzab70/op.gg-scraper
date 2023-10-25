@@ -7,7 +7,7 @@ import datetime
 
 region = "na1"
 mass_region = "americas"
-api_key = "RGAPI-a3267fad-705c-4655-b39d-c436a5c55aa6"
+api_key = ""
 
 players = [{"name": "Devon","account": "Hdannihilator"},
 		   {"name": "Alex M","account":"Crusading Dino"}, 
@@ -31,7 +31,9 @@ def get_puuid(summoner_name, region):
     )
     
     resp = requests.get(api_url)
+    
     player_info = resp.json()
+    print(player_info)
     puuid = player_info['puuid']
     return puuid  
 
@@ -148,3 +150,6 @@ def getPlayerData(player_ign):
 	    # fields = ['Game #', 'Date Played', 'Length', 'Result', 'Champion', 'Matchup', 'KDA', 'KDA Ratio', 'Kill Participation', 'CS', 'CS/min', 'Gold Earned', 'Control Wards Bought', 'Average Rank']
         data.append(['#', game_created, game_duration, result, champ_played, matchup, kda_string, ratio_string, 'kp', minions_killed, cs_min, gold_earned, wards_bought, 'avg rank'])
     return data
+
+
+get_puuid("EnDoubleU", region)
