@@ -1,10 +1,6 @@
-import functools
-from requests_html import HTMLSession
+import time
 from bs4 import *
 from tabulate import tabulate
-
-import time
-import csv
 from datetime import date
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -14,15 +10,6 @@ from selenium.webdriver.common.by import By
 
 ############################ VARIABLES ########################################
 server = "na"
-players = [{"name": "Devon","account": "Hdannihilator"},
-		   {"name": "Alex M","account":"Crusading Dino"}, 
-		   {"name": "Lamont","account":"Arri"},
-		   {"name": "Grayson","account":"xGreySwag"},
-		   {"name": "Alberto","account":"Defaults01"},
-		   {"name": "Matthhew","account":"DryEyesWhiteDrag"},
-		   {"name": "Ethan","account":"MAgicdragon0987"},
-		   {"name": "Alex G","account":"AlexGdawg"},
-           {"name": "Jacob", "account": "Velmas Dumptruck"}]
 
 ranks = ["challenger","grandmaster","master",
 		 "diamond1","diamond2","diamond3","diamond4",
@@ -101,4 +88,4 @@ def main(player_ign):
 
 
 if __name__ == "__main__":
-	main("Arri")
+	main("yourIGNhere")

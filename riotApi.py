@@ -9,16 +9,6 @@ region = "na1"
 mass_region = "americas"
 api_key = ""
 
-players = [{"name": "Devon","account": "Hdannihilator"},
-		   {"name": "Alex M","account":"Crusading Dino"}, 
-		   {"name": "Lamont","account":"Arri"},
-		   {"name": "Grayson","account":"xGreySwag"},
-		   {"name": "Alberto","account":"Defaults01"},
-		   {"name": "Matthhew","account":"DryEyesWhiteDrag"},
-		   {"name": "Ethan","account":"MAgicdragon0987"},
-		   {"name": "Alex G","account":"AlexGdawg"},
-           {"name": "Jacob", "account": "Velmas Dumptruck"}]
-
 # Gets the puuid, given a summoner name and region
 def get_puuid(summoner_name, region):
     api_url = (
@@ -152,4 +142,5 @@ def getPlayerData(player_ign):
     return data
 
 
-get_puuid("EnDoubleU", region)
+
+getPlayerData("yourIGNhere")
