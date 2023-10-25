@@ -43,19 +43,17 @@ def main(player_ign):
 
 	options = Options()
 	# Uncomment to not have it open a browser when you run
-	# options.add_argument('--headless')
+	options.add_argument('--headless')
 	options.add_argument('--log-level=3')
 	options.add_argument('--disable-gpu')
 	driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
 
-
 	# Go to page 
-	### TEMP URL HERE ###
 	url = 'https://' + server + '.op.gg/summoner/userName=' + player_ign.replace(" ","+")
 	driver.get(url)
 	time.sleep(3)
 
-	# Update games to riotAPI recency
+	# Click the update button to get most recent games
 	try:
 		updateButton = driver.find_element(By.CSS_SELECTOR, '#content-header > div.css-24wmel.ebkoxbx0 > div > div.header-profile-info > div.info > div.buttons > button.css-1ki6o6m.e18vylim0')
 		updateButton.click()
@@ -69,6 +67,7 @@ def main(player_ign):
 	time.sleep(3)
 
 	preclicked_page = driver.page_source
+
 	# Expand most recent 20 games for access to in depth game info
 	for i in range(1,21):
 		expand_button = driver.find_element(By.CSS_SELECTOR , '#content-container > div.css-1s9fubg.e1jlljr10 > div.css-164r41r.e17ux5u10 > li:nth-child(' + str(i) + ') > div > div.action > button')
@@ -77,73 +76,29 @@ def main(player_ign):
 
 	# Get the whole page's html
 	page = driver.page_source
+
+	# Stop chromedriver
 	driver.quit()
 	
+	# Now unused, potentially useful later
 	preclicked_soup = BeautifulSoup(preclicked_page, 'html.parser')
 
+	# BS html parser object
 	soup = BeautifulSoup(page, 'html.parser')
-		
-	# Grab relevant game info
-	game_lengths = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'length'})]
-
-	game_results = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'result'})]
-	times_played = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'time-stamp'})]
-
-	kdas = [x.getText(strip=True) for x in preclicked_soup.findAll('div', attrs={'class': 'k-d-a'})]
-
-	ratios = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'ratio'})][-20:]
-
+	
+	# Lists of kill participation percents and average ranks for the past 20 games
 	kps = [x.getText(strip=True)[7:] for x in soup.findAll('div', attrs={'class': 'p-kill'})]
-	pink_wards_bought = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'ward'})]
-	minion_kills_and_cs_mins = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'cs'})]
 	avg_ranks = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'average-tier'})]
 
-	# Removes 2 unrelated entries
-	ratios = ratios[2:]
-
-	# Remove every other element which are blank for some reason
-	pink_wards_bought = pink_wards_bought[0::2]
-
-	# Removes the minion info from other page sources
-	minion_kills_and_cs_mins = minion_kills_and_cs_mins[-20:]
-
-	# Removes entry from the top banner
-	kdas = kdas[1:]
-	
-	###
-	# print("Date Surveyed: ", date.today)
-	# print("Lengths: ", game_lengths, "\n")
-	# print("Results: ", game_results, "\n")
-	# print("Times Played: ", times_played, "\n")
-	# print("KDAs: ", kdas, "\n")
-	# print("Ratios: ", ratios, "\n")
-	# print("kps: ", kps, "\n")
-	print("Control Wards Bought: ", pink_wards_bought, "\n")
-	# print("Minion Info: ", minion_kills_and_cs_mins, "\n")
-	# print("Average Rank: ", avg_ranks, "\n")
-	
-	# ### Testing for length 20 bc we're pulling past 20 ranked games ###
-	print("Lengths: ", len(game_lengths))
-	print("Results: ", len(game_results))
-	print("Times Played: ", len(times_played))
-	print("KDAs: ", len(kdas))
-	# print("Ratios: ", len(ratios))
-	print("kps: ", len(kps))
-	for kp in kps:
-		kp = kp[7:]
-	print("Control Wards Bought: ", len(pink_wards_bought))
-	print("Minion Info: ", len(minion_kills_and_cs_mins))
-	print("Average Rank: ", len(avg_ranks))
-	###
+	# print("KPs: ", kps, "[",len(kps), "]")
+	# print("Average Rank: ", avg_ranks, "[", len(avg_ranks), "]")
 
 	new_array= []
-	for i in range(len(game_lengths)):
+	for i in range(len(kps)):
 		new_array.append([kps[i],avg_ranks[i]])
 	
-
 	return new_array
 
-	
 
 if __name__ == "__main__":
-	main("EnDoubleU")
+	main("Arri")
