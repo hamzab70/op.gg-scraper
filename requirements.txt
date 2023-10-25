@@ -1,3 +1,7 @@
 requests_html
 bs4
 tabulate
+time
+csv
+requests
+datetime
