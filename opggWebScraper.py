@@ -8,6 +8,8 @@ import csv
 from datetime import date
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 ############################ VARIABLES ########################################
@@ -32,7 +34,8 @@ ranks = ["challenger","grandmaster","master",
 		 "iron1","iron2","iron3", "iron4",
 		 "unranked"]
 
-chromedriver_path = "C:/Users/nwang/---/Programming/Python/Scripts/chromedriver"
+chromedriver_path = "chromedriver"
+
 ################################################################################
 
 
@@ -40,10 +43,10 @@ def main(player_ign):
 
 	options = Options()
 	# Uncomment to not have it open a browser when you run
-	options.add_argument('--headless')
+	# options.add_argument('--headless')
 	options.add_argument('--log-level=3')
 	options.add_argument('--disable-gpu')
-	driver = webdriver.Chrome(options=options)
+	driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
 
 
 	# Go to page 
