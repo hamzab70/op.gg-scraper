@@ -1,21 +1,22 @@
-Game #,Date Played,Length,Result,Champion,Matchup,KDA,KDA Ratio,Kill Participation,CS,CS/min,Gold Earned,Control Wards Bought,Average Rank
-0,10-22,34m 59s,Win,Kindred,Briar, 10/7/12,3.14:1,55%,25,0.74,14488,0,bronze 1
-1,10-22,20m 13s,Win,Kindred,Amumu, 3/5/5,1.6:1,38%,10,0.5,6673,0,bronze 1
-2,10-22,36m 20s,Win,Kindred,Diana, 3/11/14,1.55:1,43%,35,0.97,12194,0,bronze 1
-3,10-20,44m 58s,Win,Kindred,Yasuo, 8/10/13,2.1:1,42%,89,2.02,17652,0,bronze 2
-4,10-20,15m 16s,Win,Kindred,Zac, 1/0/2,3:1,18%,1,0.07,4605,0,bronze 1
-5,10-20,31m 35s,Loss,Akali,Naafiri, 9/7/8,2.43:1,53%,103,3.32,10094,0,bronze 1
-6,10-18,30m 37s,Loss,JarvanIV,Ivern, 4/7/7,1.57:1,52%,23,0.77,11332,0,silver 4
-7,10-18,41m 40s,Win,JarvanIV,LeeSin, 2/10/13,1.5:1,38%,29,0.71,12810,0,bronze 1
-8,10-18,19m 11s,Win,JarvanIV,RekSai, 2/1/9,11.0:1,44%,11,0.58,7267,0,silver 4
-9,10-17,27m 43s,Loss,Kindred,MasterYi, 2/8/3,0.62:1,33%,18,0.67,8552,0,bronze 2
-10,10-17,28m 9s,Win,Kindred,Briar, 14/4/9,5.75:1,61%,43,1.54,14248,0,bronze 2
-11,10-17,20m 36s,Loss,Kindred,Viego, 1/9/1,0.22:1,20%,6,0.3,5757,0,bronze 1
-12,10-17,34m 6s,Win,Kindred,Udyr, 14/2/7,10.5:1,58%,60,1.76,15314,0,bronze 4
-13,10-16,20m 33s,Win,Kindred,Elise, 6/2/8,7.0:1,64%,26,1.3,8406,0,bronze 3
-14,10-14,22m 16s,Win,Vi,Nidalee, 2/2/7,4.5:1,26%,5,0.23,7796,0,bronze 3
-15,10-08,21m 4s,Win,Kindred,MasterYi, 8/1/6,14.0:1,56%,24,1.14,10536,0,bronze 4
-16,10-08,23m 52s,Loss,Kindred,Trundle, 4/4/1,1.25:1,63%,31,1.35,8335,0,silver 3
-17,10-07,43m 31s,Win,Kindred,MasterYi, 20/7/16,5.14:1,67%,89,2.07,21544,0,bronze 2
-18,10-07,33m 58s,Loss,RekSai,Diana, 10/7/4,2.0:1,48%,30,0.91,12506,0,silver 4
-19,10-07,30m 4s,Win,Kindred,Briar, 5/4/15,5.0:1,56%,40,1.33,12687,0,bronze 2
+Game #,Date Played,Length,Result,Champion,Matchup,KDA,KDA Ratio,Kill Participation,CS,CS/min,Gold Earned,Gold/Min,Control Wards Bought,Vision Score
+0,11-05,17m 33s,Loss,RekSai,JarvanIV, 8/6/4,2.0:1,67%,14,0.82,8573,504,0,10
+1,11-05,30m 21s,Win,Vi,Lillia, 1/10/8,0.9:1,20%,37,1.23,10059,335,0,14
+2,11-05,4m 18s,Win,Hecarim,Karthus, 0/0/0,0:1,0%,0,0.0,1352,338,0,2
+3,11-05,33m 50s,Loss,Kayn,Lillia, 6/6/9,2.5:1,54%,56,1.7,13721,416,0,26
+4,11-05,37m 41s,Win,Lillia,Nocturne, 12/2/11,11.5:1,61%,56,1.51,16478,445,0,29
+5,11-05,40m 45s,Loss,Vi,Diana, 23/12/7,2.5:1,60%,67,1.68,20668,517,0,24
+6,11-05,39m 46s,Win,Kayn,Diana, 21/7/7,4.0:1,65%,28,0.72,20434,524,0,21
+7,11-05,38m 59s,Loss,Kindred,Briar, 5/8/15,2.5:1,44%,88,2.32,13993,368,0,15
+8,11-04,26m 49s,Loss,Kindred,Graves, 7/5/3,2.0:1,40%,30,1.15,10149,390,1,21
+9,11-04,28m 3s,Win,Kindred,MasterYi, 8/5/5,2.6:1,34%,17,0.61,12254,438,0,22
+10,11-04,35m 24s,Win,Kindred,Hecarim, 7/7/13,2.86:1,49%,69,1.97,16068,459,1,23
+11,11-03,17m 30s,Win,Kindred,XinZhao, 3/3/2,1.67:1,42%,9,0.53,6508,383,0,13
+12,11-03,28m 47s,Win,Kindred,Nocturne, 11/5/14,5.0:1,76%,45,1.61,14190,507,0,27
+13,11-03,38m 8s,Loss,Kindred,Malphite, 6/8/3,1.12:1,39%,31,0.82,13613,358,0,32
+14,11-03,24m 59s,Win,Kindred,Udyr, 5/1/3,8.0:1,31%,10,0.42,10303,429,0,20
+15,11-03,33m 16s,Loss,Khazix,Shyvana, 8/10/6,1.4:1,45%,21,0.64,13149,398,0,17
+16,11-02,29m 48s,Loss,Belveth,Volibear, 13/7/8,3.0:1,66%,53,1.83,14354,495,0,25
+17,11-02,24m 47s,Loss,RekSai,Nocturne, 10/8/4,1.75:1,54%,12,0.5,10736,447,0,5
+18,11-02,32m 28s,Loss,Shyvana,Sejuani, 10/11/9,1.73:1,54%,56,1.75,14084,440,0,13
+19,10-29,43m 37s,Loss,RekSai,Nocturne, 21/9/14,3.89:1,56%,54,1.26,22080,513,0,23
+20,N/A,N/A,Winrate: 0.5,N/A,N/A,N/A,3.0,47.9,37.6,1.2,13138.3,435.2,0.1,19.1

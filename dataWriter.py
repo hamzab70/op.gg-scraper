@@ -4,9 +4,9 @@ import opggWebScraper
 import riotApi
 
 
-fields = ['Game #', 'Date Played', 'Length', 'Result', 'Champion', 'Matchup', 'KDA', 'KDA Ratio', 'Kill Participation', 'CS', 'CS/min', 'Gold Earned', 'Control Wards Bought', 'Average Rank']
+fields = ['Game #', 'Date Played', 'Length', 'Result', 'Champion', 'Matchup', 'KDA', 'KDA Ratio', 'Kill Participation', 'CS', 'CS/min', 'Gold Earned', 'Gold/Min', 'Control Wards Bought', 'Vision Score']
 
-players = [{"name": "Devon","account": "Hdannihilator"},
+players = [{"name": "Devin","account": "Hdannihilator"},
 		   {"name": "Alex M","account":"Crusading Dino"}, 
 		   {"name": "Lamont","account":"Arri"},
 		   {"name": "Grayson","account":"xGreySwag"},
@@ -26,9 +26,7 @@ def one_person(name, player_ign):
         for i in range(len(riotapiRows)):
             row = riotapiRows[i]
             row[0] = i
-            row[8] = opggRows[i][0]
-            row[13] = opggRows[i][1]     
-
+  
         # Write data to CSV
         fileName = name + 'GameData.csv'
         with open('data/' + fileName, 'w', newline='') as file:
@@ -50,15 +48,13 @@ def everyone():
 
     for name in players:
         try:
-            opggRows = opggWebScraper.main(name['account'])
-            riotapiRows = riotApi.getRemainingData(name['account'])
+            # opggRows = opggWebScraper.main(name['account'])
+            riotapiRows = riotApi.getPlayerData(name['account'])
 
-            # Fill in game number, kill participation, and average rank columns using the opgg data
+            # Add game numbers
             for i in range(len(riotapiRows)):
                 row = riotapiRows[i]
                 row[0] = i
-                row[8] = opggRows[i][0]
-                row[13] = opggRows[i][1]
 
             # Write data to CSV
             fileName = name['name'] + 'GameData.csv'
@@ -76,7 +72,8 @@ def everyone():
     # Prints the elapsed time of the program running
     print(time.time() - start)
 
-
+    
+    
 everyone()
 
 # one_person("Lamont", "Arri")

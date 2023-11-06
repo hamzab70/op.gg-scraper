@@ -11,15 +11,39 @@ from selenium.webdriver.common.by import By
 ############################ VARIABLES ########################################
 server = "na"
 
-ranks = ["challenger","grandmaster","master",
-		 "diamond1","diamond2","diamond3","diamond4",
-		 "emerald1","emerald2","emerald3","emerald4",
-		 "platinum1","platinum2","platinum3","platinum4",
-		 "gold1","gold2","gold3","gold4",
-		 "silver1","silver2","silver3","silver4",
-		 "bronze1","bronze2","bronze3","bronze4",
-		 "iron1","iron2","iron3", "iron4",
-		 "unranked"]
+ranks = {"challenger": 31,
+		 "grandmaster": 30,
+		 "master": 29,
+		 "diamond1": 28,
+		 "diamond2": 27,
+		 "diamond3": 26,
+		 "diamond4": 25,
+		 "emerald1": 24,
+		 "emerald2": 23,
+		 "emerald3": 22,
+		 "emerald4": 21,
+		 "platinum1": 20,
+		 "platinum2": 19,
+		 "platinum3": 18,
+		 "platinum4": 17,
+		 "gold1": 16,
+		 "gold2": 15,
+		 "gold3": 14,
+		 "gold4": 13,
+		 "silver1": 12,
+		 "silver2": 11,
+		 "silver3": 10,
+		 "silver4": 9,
+		 "bronze1": 8,
+		 "bronze2": 7,
+		 "bronze3": 6,
+		 "bronze4": 5,
+		 "iron1": 4,
+		 "iron2": 3,
+		 "iron3": 2, 
+		 "iron4": 1,
+		 "unranked": 0}
+
 
 chromedriver_path = "chromedriver"
 
@@ -73,18 +97,10 @@ def main(player_ign):
 	# BS html parser object
 	soup = BeautifulSoup(page, 'html.parser')
 	
-	# Lists of kill participation percents and average ranks for the past 20 games
-	kps = [x.getText(strip=True)[7:] for x in soup.findAll('div', attrs={'class': 'p-kill'})]
+	# Lists of average ranks for the past 20 games
 	avg_ranks = [x.getText(strip=True) for x in soup.findAll('div', attrs={'class': 'average-tier'})]
-
-	# print("KPs: ", kps, "[",len(kps), "]")
-	# print("Average Rank: ", avg_ranks, "[", len(avg_ranks), "]")
-
-	new_array= []
-	for i in range(len(kps)):
-		new_array.append([kps[i],avg_ranks[i]])
 	
-	return new_array
+	return avg_ranks
 
 
 if __name__ == "__main__":

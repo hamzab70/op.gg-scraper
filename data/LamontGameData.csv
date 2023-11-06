@@ -1,21 +1,22 @@
-Game #,Date Played,Length,Result,Champion,Matchup,KDA,KDA Ratio,Kill Participation,CS,CS/min,Gold Earned,Control Wards Bought,Average Rank
-0,10-22,51m 32s,Loss,Lucian,Kaisa, 20/6/7,4.5:1,48%,378,7.41,27117,4,silver 3
-1,10-22,23m 32s,Loss,Lucian,Jhin, 3/5/2,1.0:1,50%,148,6.43,8873,1,silver 2
-2,10-22,30m 33s,Loss,Lucian,MissFortune, 4/5/3,1.4:1,64%,180,6.0,10102,2,silver 3
-3,10-22,39m 5s,Win,Lucian,Kaisa, 15/10/11,2.6:1,55%,189,4.85,19385,4,silver 3
-4,10-22,25m 2s,Win,Lucian,Vayne, 14/2/8,11.0:1,52%,167,6.68,13668,1,silver 4
-5,10-22,24m 58s,Loss,Lucian,Malzahar, 6/4/6,3.0:1,86%,144,6.0,9635,1,silver 3
-6,10-22,38m 30s,Win,Lucian,Ezreal, 22/8/9,3.88:1,62%,243,6.39,23224,1,silver 4
-7,10-22,28m 42s,Loss,Lucian,Xayah, 7/4/5,3.0:1,67%,173,6.18,10723,2,silver 2
-8,10-22,19m 51s,Loss,Lucian,Jhin, 6/4/2,2.0:1,73%,108,5.68,7765,0,silver 3
-9,10-22,34m 59s,Win,Lucian,Vayne, 8/3/12,6.67:1,50%,229,6.74,15779,2,bronze 1
-10,10-22,20m 13s,Win,Lucian,Tristana, 8/2/5,6.5:1,62%,128,6.4,9830,3,bronze 1
-11,10-22,36m 20s,Win,Lucian,Jhin, 17/5/5,4.4:1,55%,214,5.94,19004,1,bronze 1
-12,10-21,31m 20s,Loss,Lucian,Samira, 1/3/4,1.67:1,42%,219,7.06,11546,0,silver 3
-13,10-21,24m 37s,Loss,Lucian,Kaisa, 0/1/2,2.0:1,17%,180,7.5,7894,0,silver 4
-14,10-21,24m 13s,Loss,Lucian,Ashe, 6/6/4,1.67:1,67%,157,6.54,10331,1,silver 2
-15,10-21,54m 5s,Win,Lucian,Kaisa, 10/6/8,3.0:1,58%,277,5.13,22793,1,bronze 2
-16,10-21,35m 2s,Loss,Lucian,Jinx, 8/4/3,2.75:1,50%,235,6.71,15478,2,bronze 3
-17,10-21,21m 41s,Win,Lucian,Jinx, 8/0/8,16:1,64%,167,7.95,11439,1,bronze 4
-18,10-21,31m 38s,Loss,Lucian,Ezreal, 6/5/5,2.2:1,29%,196,6.32,12917,2,silver 4
-19,10-21,42m 20s,Loss,Lucian,Anivia, 20/9/15,3.89:1,53%,311,7.4,25077,0,bronze 3
+Game #,Date Played,Length,Result,Champion,Matchup,KDA,KDA Ratio,Kill Participation,CS,CS/min,Gold Earned,Gold/Min,Control Wards Bought,Vision Score
+0,11-03,26m 42s,Loss,Nilah,Ziggs, 2/2/0,1.0:1,20%,195,7.5,8504,327,1,11
+1,11-03,31m 44s,Loss,Nilah,Kaisa, 9/5/9,3.6:1,53%,166,5.35,13514,436,2,18
+2,11-03,23m 10s,Win,Nilah,AurelionSol, 3/4/13,4.0:1,40%,124,5.39,9564,416,1,8
+3,11-03,41m 34s,Win,Nilah,Zeri, 14/4/9,5.75:1,61%,218,5.32,19487,475,1,26
+4,11-03,29m 27s,Win,Lucian,Nilah, 4/4/8,3.0:1,34%,197,6.79,12174,420,2,20
+5,11-03,35m 50s,Win,Nilah,Samira, 15/6/14,4.83:1,74%,230,6.57,18335,524,2,29
+6,11-03,31m 24s,Win,Nilah,Ziggs, 8/5/10,3.6:1,47%,152,4.9,13039,421,3,24
+7,11-03,34m 51s,Win,Nilah,Tristana, 11/7/4,2.14:1,38%,220,6.47,17565,517,1,10
+8,11-03,29m 4s,Win,Nilah,Caitlyn, 11/6/7,3.0:1,50%,177,6.1,13937,481,1,11
+9,11-03,23m 44s,Win,Nilah,Kaisa, 2/5/5,1.4:1,24%,101,4.39,8016,349,1,8
+10,11-03,40m 35s,Loss,Nilah,Ashe, 6/5/4,2.0:1,45%,277,6.92,15847,396,2,26
+11,11-03,35m 51s,Win,Nilah,Yasuo, 18/3/6,8.0:1,48%,170,4.86,17964,513,1,26
+12,11-03,37m 40s,Loss,Nilah,Samira, 14/9/11,2.78:1,57%,164,4.43,16041,434,2,17
+13,11-03,19m 47s,Loss,Nilah,Jinx, 5/6/4,1.5:1,60%,126,6.63,8474,446,2,12
+14,11-03,55m 15s,Loss,Nilah,Sion, 15/12/8,1.92:1,43%,244,4.44,21239,386,3,43
+15,11-03,29m 30s,Win,Nilah,Xayah, 14/6/7,3.5:1,62%,141,4.86,14059,485,3,20
+16,11-02,33m 44s,Win,Nilah,Lucian, 11/9/14,2.78:1,58%,172,5.21,14696,445,4,32
+17,11-02,23m 29s,Loss,Nilah,Tristana, 2/4/1,0.75:1,30%,140,6.09,7481,325,2,14
+18,11-02,37m 18s,Win,Nilah,Xayah, 9/9/6,1.67:1,34%,197,5.32,16025,433,2,17
+19,11-02,34m 46s,Loss,Nilah,Vayne, 15/5/11,5.2:1,63%,211,6.21,18462,543,2,23
+20,N/A,N/A,Winrate: 0.6,N/A,N/A,N/A,3.1,47.0,181.1,5.7,14221.1,438.6,1.9,19.8

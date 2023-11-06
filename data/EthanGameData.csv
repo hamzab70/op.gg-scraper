@@ -1,21 +1,22 @@
-Game #,Date Played,Length,Result,Champion,Matchup,KDA,KDA Ratio,Kill Participation,CS,CS/min,Gold Earned,Control Wards Bought,Average Rank
-0,10-22,24m 59s,Loss,Yone,Renekton, 4/9/4,0.89:1,40%,127,5.29,8776,3,bronze 2
-1,10-22,37m 23s,Loss,Yone,Zed, 12/11/8,1.82:1,45%,218,5.89,17048,1,silver 4
-2,10-22,29m 15s,Loss,Rengar,Ekko, 5/6/7,2.0:1,71%,26,0.9,10481,0,bronze 1
-3,10-21,21m 54s,Win,Shyvana,Nunu, 4/2/4,4.0:1,10%,36,1.71,9119,0,bronze 1
-4,10-21,29m 29s,Loss,Rengar,MasterYi, 10/11/4,1.27:1,60%,12,0.41,13987,1,bronze 1
-5,10-20,32m 34s,Win,Rengar,MasterYi, 2/5/0,0.4:1,15%,20,0.62,11707,2,silver 3
-6,10-19,26m 17s,Loss,Rengar,Diana, 4/7/2,0.86:1,48%,16,0.62,8873,1,bronze 1
-7,10-18,39m 55s,Win,Swain,Nami, 1/11/7,0.73:1,58%,13,0.33,9818,0,silver 3
-8,10-18,18m 8s,Win,Swain,Lux, 3/5/9,2.4:1,52%,17,0.94,6233,2,bronze 1
-9,10-18,29m 8s,Win,Swain,Janna, 7/5/14,4.2:1,64%,46,1.59,10702,1,bronze 2
-10,10-10,28m 29s,Loss,Pyke,Akali, 9/5/2,2.2:1,30%,70,2.5,9450,0,bronze 1
-11,10-10,30m 4s,Win,Pyke,Syndra, 14/6/9,3.83:1,53%,64,2.13,12907,0,bronze 1
-12,10-10,23m 38s,Win,Pyke,Zyra, 6/1/4,10.0:1,45%,53,2.3,8392,0,bronze 2
-13,10-10,27m 35s,Win,Pyke,Senna, 6/3/10,5.33:1,58%,34,1.26,9724,1,silver 4
-14,10-09,27m 41s,Win,Pyke,Naafiri, 8/5/7,3.0:1,43%,75,2.78,9710,1,bronze 2
-15,10-09,22m 23s,Win,Pyke,TahmKench, 9/2/9,9.0:1,42%,21,0.95,9285,2,bronze 2
-16,10-09,34m 55s,Win,Pyke,Yone, 3/6/13,2.67:1,53%,65,1.91,10611,0,bronze 1
-17,10-09,23m 41s,Win,Pyke,Yone, 11/4/5,4.0:1,38%,62,2.7,9785,0,bronze 3
-18,10-08,35m 44s,Loss,Pyke,Blitzcrank, 5/8/13,2.25:1,63%,37,1.06,10025,1,bronze 2
-19,10-08,25m 6s,Win,Pyke,AurelionSol, 8/5/6,2.8:1,53%,52,2.08,8176,0,bronze 1
+Game #,Date Played,Length,Result,Champion,Matchup,KDA,KDA Ratio,Kill Participation,CS,CS/min,Gold Earned,Gold/Min,Control Wards Bought,Vision Score
+0,11-02,29m 48s,Loss,Yone,Quinn, 6/10/6,1.2:1,40%,138,4.76,11879,410,2,26
+1,11-01,27m 27s,Win,Yone,Veigar, 6/7/9,2.14:1,36%,133,4.93,11006,408,3,27
+2,11-01,33m 41s,Loss,Yone,Vex, 12/11/8,1.82:1,54%,192,5.82,15056,456,3,36
+3,11-01,33m 26s,Win,Yone,Akali, 4/9/3,0.78:1,23%,154,4.67,11699,355,1,22
+4,10-31,33m 57s,Win,Sona,Lux, 1/12/24,2.08:1,52%,11,0.33,9106,276,2,80
+5,10-31,29m 27s,Loss,Leona,Senna, 2/1/8,10.0:1,71%,39,1.34,6878,237,2,40
+6,10-31,30m 40s,Win,Swain,Pyke, 3/6/21,4.0:1,51%,23,0.77,9762,325,1,59
+7,10-31,23m 16s,Win,Leona,Blitzcrank, 2/4/12,3.5:1,47%,31,1.35,6671,290,0,27
+8,10-31,25m 34s,Loss,Swain,Velkoz, 7/9/8,1.67:1,54%,20,0.8,9176,367,1,54
+9,10-30,24m 10s,Loss,Yone,Lux, 3/11/1,0.36:1,22%,108,4.5,6950,290,0,16
+10,10-30,24m 58s,Win,Yone,Vex, 11/1/9,20.0:1,57%,119,4.96,11990,500,1,16
+11,10-30,36m 55s,Win,Yone,Veigar, 21/5/7,5.6:1,58%,235,6.53,21191,589,2,45
+12,10-30,32m 26s,Win,Leona,Blitzcrank, 1/10/13,1.4:1,37%,36,1.12,8140,254,2,62
+13,10-30,24m 27s,Win,Yone,Yasuo, 9/4/8,4.25:1,55%,133,5.54,11123,463,2,19
+14,10-30,27m 59s,Win,Swain,Lulu, 6/7/15,3.0:1,51%,37,1.37,10155,376,2,54
+15,10-29,34m 26s,Loss,Swain,Seraphine, 5/14/7,0.86:1,44%,23,0.68,8598,253,3,71
+16,10-24,28m 4s,Loss,Swain,Milio, 2/11/8,0.91:1,71%,29,1.04,7584,271,0,36
+17,10-24,31m 4s,Win,Swain,Thresh, 6/7/25,4.43:1,60%,53,1.71,12349,398,1,48
+18,10-23,39m 36s,Loss,Yone,Ziggs, 15/12/10,2.08:1,66%,230,5.9,20026,513,0,33
+19,10-23,40m 40s,Win,Rengar,Shaco, 18/10/6,2.4:1,47%,26,0.65,18380,460,0,18
+20,N/A,N/A,Winrate: 0.6,N/A,N/A,N/A,3.6,49.8,88.5,2.9,11386.0,374.6,1.4,39.5
