@@ -6,7 +6,7 @@ import datetime
 
 region = "na1"
 mass_region = "americas"
-api_key = ""
+api_key = "RGAPI-0990acb0-c42b-4d56-8e65-f041c8c6d7e1"
 
 # Gets the puuid, given a summoner name and region
 def get_puuid(summoner_name, region):
@@ -96,7 +96,7 @@ def get_opposing_champ(match_id, player_ign, our_role):
         if puuid != this_players_puuid and pd['teamPosition'] == our_role:
             matchup = pd['championName']
             return matchup
-        
+
 
 # Calls all other functions to get all of a player's data given their ign
 def getPlayerData(player_ign):
@@ -173,6 +173,7 @@ def getPlayerData(player_ign):
     data.append(["Averages:", "N/A", "N/A", "Winrate: " + str(round(sum_wins / 20,1)), "N/A", "N/A", "N/A", round(sum_kda_ratio/20,1),round(sum_kp/20,1),round(sum_cs/20,1),round(sum_csmin / 20,1), round(sum_goldearned / 20,1), round(sum_goldmin/20,1), round(sum_wards/20,1), round(sum_visionscore/20,1)])
     return data
 
+
 # Gets a players IGN from their PUUID
 def getIGNfromPuuid(puuid):
 
@@ -189,6 +190,7 @@ def getIGNfromPuuid(puuid):
     resp = requests.get(api_url)
     ign = resp.json()
     return ign['name']  
+   
     
 # Returns the percent of the teams kills the given player (puuid) participated in during the given game (match_id)
 def getKp(match_id, puuid, participation, participants):

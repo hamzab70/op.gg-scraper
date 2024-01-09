@@ -44,7 +44,6 @@ ranks = {"challenger": 31,
 		 "iron4": 1,
 		 "unranked": 0}
 
-
 chromedriver_path = "chromedriver"
 
 ################################################################################
