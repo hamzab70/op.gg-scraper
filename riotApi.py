@@ -6,23 +6,24 @@ import datetime
 
 region = "na1"
 mass_region = "americas"
-api_key = "RGAPI-0990acb0-c42b-4d56-8e65-f041c8c6d7e1"
+api_key = "RGAPI-4f0993f5-901f-4cf7-abe1-9b3cae615c07"
 
 # Gets the puuid, given a summoner name and region
-def get_puuid(summoner_name, region):
+def get_puuid(summoner_name, region, tag):
     api_url = (
         "https://" + 
-        region +
-        ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" +
-        summoner_name +
+        mass_region +
+        ".api.riotgames.com/riot/account/v1/accounts/by-riot-id/" +
+        summoner_name + "/" +
+        tag + 
         "?api_key=" +
         api_key
     )
-    
+
     resp = requests.get(api_url)
-    
+
     player_info = resp.json()
-    # print(player_info)
+    print(player_info)
     puuid = player_info['puuid']
     return puuid  
 
@@ -85,10 +86,10 @@ def timestamp_to_datetime(timestamp):
 
 
 # Gets the name of the champion the given player was playing against in the given match
-def get_opposing_champ(match_id, player_ign, our_role):
+def get_opposing_champ(match_id, player_ign, our_role, tag):
     data = []
     match_data = get_match_data(match_id, mass_region)
-    this_players_puuid = get_puuid(player_ign, region)
+    this_players_puuid = get_puuid(player_ign, region, tag)
     participant_puuids = match_data['metadata']['participants']
     for puuid in participant_puuids:
         pd = find_player_data(match_data, puuid)
@@ -99,9 +100,9 @@ def get_opposing_champ(match_id, player_ign, our_role):
 
 
 # Calls all other functions to get all of a player's data given their ign
-def getPlayerData(player_ign):
+def getPlayerData(player_ign, tag):
     data = []
-    puuid = get_puuid(player_ign, region)
+    puuid = get_puuid(player_ign, region, tag)
     match_ids = get_match_ids(puuid, mass_region)
 
 
@@ -150,7 +151,7 @@ def getPlayerData(player_ign):
         gold_min = round(gold_earned/mins)
         sum_goldmin += gold_min
         role = player_match_data['teamPosition']
-        matchup = get_opposing_champ(id, player_ign, role)
+        matchup = get_opposing_champ(id, player_ign, role, tag)
 
         kda_string = ' ' + str(kills) + '/' + str(deaths) + '/' + str(assists)
         
