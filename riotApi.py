@@ -6,7 +6,7 @@ import datetime
 
 region = "na1"
 mass_region = "americas"
-api_key = "RGAPI-4f0993f5-901f-4cf7-abe1-9b3cae615c07"
+api_key = "..."
 
 # Gets the puuid, given a summoner name and region
 def get_puuid(summoner_name, region, tag):
