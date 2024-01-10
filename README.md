@@ -1,10 +1,8 @@
-# op.gg Scraper
+# LOLPlayerAnalysisTool
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/hamzab70) 
+A tool that utilizes web scraping and calls to Riot Games' APIs to gather, compile, and assist in analysis of any number of league of legends accounts
 
-Web scrapper that uses op.gg anLeague Of Legends API to sort a list of players using the same format as https://soloqchallenge.gg/
-
-
+Forked from: https://github.com/hamzab70/op.gg-scraper
 
 ## Requirements
 
@@ -14,51 +12,37 @@ You can install all the dependencies using pip3 and the requirements.txt, just e
 pip3 install -r requirements.txt 
 ```
 
+# Running the Script
 
-
-## Usage
-
-Clone the repo:
+To run the entire program, you should input your own player names and IGNs into the dictionary at the top of the program, you can then simply run dataWriter.py, then wait roughly 2 minutes per person (to be improved upon) and the files will be created in a folder in the root directory.
 
 ```
-git clone https://github.com/hamzab70/op.gg-Scraper.git
+python3 dataWriter.py
 ```
 
-Open opgg.py and change the variables (check example.py if you have any doubt):
-
-* server = the accounts server (use the op.gg prefixes such as euw, br, kr, na...)
-* players = is a list of dictionaries that include the name of each player and his LOL account, so you must create a new entry for each player you want to scrape
-
-Then you can execute the scrapper:
-
+You can run only the op.gg web scraping portion by putting the IGN of the account in the 'main' call in opggWebScraper.py (currently line 91)
 ```
-python3 opgg.py
+if __name__ == "__main__":
+	main("yourIGNhere")
 ```
 
-and the result should be something like:
-
 ```
-=====  =========  ===============  =================  =======  ======  ========  =========
-  Pos  Player     Account          Elo                  Games    Wins    Losses  Winrate
-=====  =========  ===============  =================  =======  ======  ========  =========
-    1  Nino       TROPHY WINNER    Platinum 4 (0 LP)       76      49        27  64%
-    2  Ivan       MC Vergote       Gold 1 (45 LP)          74      45        29  61%
-    3  Miguel     El Pinche Joto   Gold 2 (0W-1L)         104      63        41  61%
-    4  Shaggy     LC Spanish Uzi   Gold 2 (56 LP)          83      43        40  52%
-    5  Eric       Blackbird SR71   Silver 1 (57 LP)        85      44        41  52%
-    6  Igna       MarthaeSoSo      Silver 2 (0 LP)         39      21        18  54%
-    7  Guaye      RobertazpeLkN    Silver 3 (23 LP)        62      29        33  47%
-    8  Hamza      Kerry Co Boalak  Bronze 1 (30 LP)        16       9         7  56%
-    9  Pol        Topacio Tenorio  Bronze 1 (24 LP)        22      10        12  45%
-   10  Parejo     RITOPLSDONTBAN   Bronze 1 (0 LP)         15       7         8  47%
-   11  Sergi      Papingo Ibaka    Bronze 3 (85 LP)        16       7         9  44%
-   12  Bastardas  r u fine         Unranked                 0       0         0  0%
-=====  =========  ===============  =================  =======  ======  ========  =========
+python3 opggWebScraper.py 
 ```
 
+You can run only the riot api portion by calling any function on someone's IGN and other necessary parameters in riotApi.py (currently lines 145+)
+NOTE: you will have to input your own riot API key at the top where there's a variable for it. Google it if you don't know how to find it.
+```
+getPlayerData("yourIGNhere")
+get_puuid("yourIGNhere", "na")
+```
 
+```
+python3 riotApi.py 
+```
 
 ## Known issues
 
-- It doesn't get along very well with unranked accounts, so if a player is unranked it just prints empty data.
-- The sorting is done by sort(a,b) based in the League > LeaguePoints > Winratio > Wins, if two or more players have the same data in this four variables it just sort them by alphabetical order.
+```
+Todo
+```

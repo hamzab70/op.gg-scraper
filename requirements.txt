@@ -1,3 +1,5 @@
 requests_html
 bs4
 tabulate
+requests
+webdriver_manager
